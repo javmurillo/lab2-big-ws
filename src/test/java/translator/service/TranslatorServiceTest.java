@@ -24,4 +24,10 @@ public class TranslatorServiceTest {
         assertEquals("Esto es una prueba de servicio de traducción",translatedText.getTranslation());
     }
 
+    @Test
+    public void translateTestBasque() throws Exception {
+        TranslatedText translatedText = translatorService.translate("es", "eu", "Esta es la práctica dos de Ingeniería Web");
+        assertEquals("Hau da, ezartzeko bi Web Ingeniaritza",translatedText.getTranslation());
+    }
+
 }
